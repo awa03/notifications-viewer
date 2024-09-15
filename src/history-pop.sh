@@ -13,7 +13,7 @@ while IFS= read -r notif && IFS= read -r id <&3; do
 done < <(echo "$notifications") 3< <(echo "$ids")
 
 
-selected=$(echo -e "$menu_items" | rofi -dmenu -p "Select an option:")
+selected=$(echo -e "$menu_items" | rofi -dmenu -p "Notifications ")
 
 if [[ $selected == *:* ]]; then
     id=$(echo "$selected" | awk -F':' '{print $2}')
